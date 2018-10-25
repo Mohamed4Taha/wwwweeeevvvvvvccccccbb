@@ -549,3 +549,66 @@ client.on('typingStart', (ch, user) => {
         })
     }
 });
+
+
+
+//ميوت الاوامر في شات
+
+const fs = require("fs"); 
+const ms = require("ms");
+
+const ♛Five Stars♛ = [
+  "#credit",
+  "#profile",
+  "#rep",
+  "#top",
+  "#id",
+  "1play",
+  "!invites",
+  "!invite",
+  "!top",
+  "!help",
+  "#help",
+  "3play",
+  "2play",
+  "1stop",
+  "2stop",
+  "3stop",
+  "1skip",
+  "2skip",
+  "3skip",
+  "$Fivebc",
+  "$bot",
+  "$image",
+
+
+]
+client.on('message', message => {
+var mute = message.guild.roles.find("name", "mute");
+var warn = message.guild.roles.find("name", "warn");
+  if(alphacodes.some(word => message.content.includes(word))) {
+  if(message.channel.id !== '<#504698949559386123>') return;
+  if (message.author.bot) return;
+  
+  if(message.member.roles.has()) return;
+  if(!message.member.roles.has()) {
+  message.member.addRole(warn)
+  message.reply(`**تم اعطائك تحذير لانك استخدمت اوامر في الشات😠**`) 
+  }
+  
+  if(message.member.roles.has(warn.id)) {
+      message.member.addRole(mute)
+      message.member.removeRole(warn)
+      let mutetime = "20m";
+    
+    message.reply(`**تم اعطائك ميوت كتابي لمدة 20 دقائق 🤐**!`);
+  
+      setTimeout(function(){
+      message.member.removeRole(mute)
+      message.reply(`تم الغاء الميوت عنك!`)
+    }, ms(mutetime))    
+     
+  }
+  
+  }
+  })

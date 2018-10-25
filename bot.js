@@ -136,54 +136,26 @@ client.on("guildMemberAdd", member => {
 
 //حذف الشات
 
-var client = new Discord.Client();
-
-client.on("message", async msg => {
-
-    if (msg.channel.type !== "text") return undefined;
-
-    if (msg.auhtor.bot) return undefined;
-
-    var args = msg.content.split("clear")
-
-    var prefix = "$"
-
-    if (msg.content.toLowerCase().startsWith(prefix + "purge")) {
-
-    if(!msg.guild.members.get(msg.author.id).hasPermission("MANAGE_MESSAGES")) return msg.channel.send("You lack permissions.")
-
-    if(!msg.guild.members.get(client.user.id).hasPermission("MANAGE_MESSAGES")) return msg.channel.send("I lack permissions.")
-
-    if (!args[1]) return msg.channel.send("DiscordAPI Err : Missing args.")
-
-    var count = parseInt(args[1]);
-
-    var fetched = msg.channel.fetchMessages({limit : count})
-
-    if (isNaN(count)) return msg.channel.send("DiscordAPI Err : Only numbers are allowed.")
-
-    if (count < 0) return msg.channel.send("DiscordAPI Err : Unvalid numbers.")
-
-    if (count == 0) return msg.channel.send("DiscordAPI Err : 0 messages ???")
-
-    if (count > 100) return msg.channel.send(`DiscordAPI Err : cannot delete ${args[1]} message..`)
-
-    if (fetched.length == 0) return msg.channel.send(`DiscordAPI Err : ${msg.channel.name} is empty..`)
-
-    else {
-    try {
-        fetched.then(async msgs => {
-          await msg.channel.bulkDelete(msgs)
-          await msg.channel.send(`Bulked ${msgs.size-=1} message.`).then(msg => {
-            msg.delete(4000)
-          })
-        })
-    } catch (e) {
-      console.log(e.stack)
-    }
-    }
-  }
-})
+client.on("message", message => { //clear
+              var args = message.content.substring(prefix.length).split(" ");
+              if (message.content.startsWith("$clear")) {
+                  if(!message.channel.guild) return message.reply('**❌ اسف لكن هذا الامر للسيرفرات فقط **');         
+     if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**⚠  لا يوجد لديك صلاحية لمسح الشات**');
+          var msg;
+          msg = parseInt();
+        
+        message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
+        message.channel.sendMessage("", {embed: {
+          title: "``تــم مسح الشات ``",
+          color: 0x5016f3, 
+          footer: {
+            
+          }
+        }}).then(msg => {msg.delete(3000)});
+                            }
+  
+       
+  });
 
 
 

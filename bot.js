@@ -558,26 +558,7 @@ client.on('typingStart', (ch, user) => {
 const fs = require("fs"); 
 const ms = require("ms");
 
-const probot = [
-  "#credit",
-  "#profile",
-  "#rep",
-  "#top",
-  "#id",
-  "1play",
-  "!invites",
-  "!invite",
-  "!top",
-  "!help",
-  "#help",
-  "3play",
-  "2play",
-  "1stop",
-  "2stop",
-  "3stop",
-  "1skip",
-  "2skip",
-  "3skip",
+const ♛Five Stars♛ = [
   "$image",
   "$bot",
 	

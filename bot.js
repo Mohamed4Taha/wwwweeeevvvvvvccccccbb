@@ -258,10 +258,11 @@ client.on('message', msg =>{
   if(msg.author.id !== 'id') return
   if(msg.content.startsWith(`$mute`)){
     msg.guild.roles.forEach(function(role){
-      give.role(`mute`)
+      role.give(`mute`)
     })
   }
 })
+
 
 
 

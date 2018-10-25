@@ -252,21 +252,6 @@ client.on('message' , najzx => {
 
 
 
-//الميوت
-
-client.on('message', msg =>{
-  if(msg.author.id !== 'id') return
-  if(msg.content.startsWith(`$mute`)){
-    msg.guild.roles.forEach(function(role){
-      role.give(`mute`)
-    })
-  }
-})
-
-
-
-
-
 //الطرد
 
 client.on('message', message => {

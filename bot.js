@@ -63,6 +63,18 @@ client.on('message', msg => {
       }
     });
 
+    client.on('message', msg => {
+        if (msg.content === 'هاي') {
+           msg.reply('هايات');
+          }
+        });
+
+    client.on('message', msg => {
+        if (msg.content === 'ك') {
+           msg.reply('ك اللي هي اختصار **اوك**');
+          }
+        });
+
 //الترحيب
 
 client.on('guildMemberAdd', member => {
@@ -95,7 +107,7 @@ client.on('guildMemberAdd', member => {
         .setDescription(`مع السلامه تشرفنا بك :raised_hand::skin-tone-1: :pensive: `)
         .addField('👤   تبقي',`**[ ${member.guild.memberCount} ]**`,true)
         .setColor('RED')
-        .setFooter(`====ولكم منور السيرفر اتمنا لك الاستمتاع====`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
+        .setFooter(`====اهلا السيرفر نور بيك و الله====`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
     
     var channel =member.guild.channels.find('name', 'welcome')
     if (!channel) return;
@@ -125,7 +137,7 @@ client.on("guildMemberAdd", member => {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .addField(' البنق🚀 ',`[${Date.now() - message.createdTimestamp}]`) 
-.addField('مصمم  + صاحب البوت ',`★мohme𝕯★| ProG🌹#4476`)
+.addField('مصمم  + صاحب البوت ',`★мohme𝕯★| ProG🌹#4476 و W͈̪̣AR NI̴̧͝GH̴̵T͇ | RG🌹#4506`)
 .setColor('#027aff')
   message.channel.sendEmbed(embed);
     }
@@ -339,7 +351,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "By Abo Khalil"
+          text: "🌟Five Stars🌟    [ !^мohαmε𝕯^!#4476-W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
         }
       }}).then(msg => {msg.delete(10000)});
                           }
@@ -355,7 +367,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "By Abo Khalil"
+          text: "🌟Five Stars🌟    [ !^мohαmε𝕯^!#4476-W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
         }
       }}).then(msg => {msg.delete(10000)});
                           }
@@ -371,7 +383,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "By Abo Khalil"
+          text: "🌟Five Stars🌟    [ !^мohαmε𝕯^!#4476-W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
         }
       }}).then(msg => {msg.delete(10000)});
                           }
@@ -387,7 +399,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "By Abo Khalil"
+          text: "🌟Five Stars🌟    [ !^мohαmε𝕯^!#4476-W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
         }
       }}).then(msg => {msg.delete(10000)});
                           }
@@ -403,7 +415,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "By Abo Khalil"
+          text: "🌟Five Stars🌟    [ !^мohαmε𝕯^!#4476-W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
         }
       }}).then(msg => {msg.delete(10000)});
                           }
@@ -419,7 +431,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "By Abo Khalil"
+          text: "🌟Five Stars🌟    [ !^мohαmε𝕯^!#4476-W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
         }
       }}).then(msg => {msg.delete(10000)});
                           }
@@ -435,7 +447,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "By Abo Khalil"
+          text: "🌟Five Stars🌟    [ !^мohαmε𝕯^!#4476-W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
         }
       }}).then(msg => {msg.delete(10000)});
                           }
@@ -451,7 +463,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
-          text: "By ★мohmed★| ProG🌹"
+          text: "🌟Five Stars🌟    [ !^мohαmε𝕯^!#4476-W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"
         }
       }}).then(msg => {msg.delete(10000)});
                           }
@@ -472,7 +484,7 @@ client.on('message', message => {
         color: 0x06DF00,
         description: "يمنع النشر في هذا السيرفر",
         footer: {
-          text: "By ★ Mohmed★| ProG🌹"
+          text: "🌟Five Stars🌟    [ !^мohαmε𝕯^!#4476-W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]By ★ Mohmed★| ProG🌹"
         }
       }}).then(msg => {msg.delete(3000)});
                           }

@@ -34,6 +34,12 @@ client.login(process.env.BOT_TOKEN);
 //الرد التلقائي
 
 client.on('message', msg => {
+    if (msg.content === 'السلام عليكم') {
+       msg.reply('${user} **و عليكم السلام و رحمة الله و بركاته:heart: **');
+      }
+    });
+
+client.on('message', msg => {
     if (msg.content === 'هلا') {
        msg.reply('هلا بيك ');
       }

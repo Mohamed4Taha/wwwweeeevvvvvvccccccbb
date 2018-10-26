@@ -545,7 +545,7 @@ client.on ("guildMemberRemove", member => {
 
 client.on('typingStart', (ch, user) => {
     if(user.presence.status === 'offline') {
-        ch.send(`بس يا محمود يا تيييييت`)
+        ch.send(`${user} تحذير هذا شخص مسوي نفسه اوف لاين ويكتب`)
         .then(msg => {
             msg.delete(10000)
         })

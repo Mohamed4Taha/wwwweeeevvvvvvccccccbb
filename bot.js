@@ -40,6 +40,18 @@ client.on('message', msg => {
     });
 
 client.on('message', msg => {
+    if (msg.content === 'ولكم') {
+       msg.reply('باك');
+      }
+    });
+
+client.on('message', msg => {
+    if (msg.content === 'باك') {
+       msg.reply('ولكم باك');
+      }
+    });
+
+client.on('message', msg => {
     if (msg.content === 'هلا') {
        msg.reply('هلا بيك ');
       }

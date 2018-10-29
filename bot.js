@@ -87,12 +87,6 @@ client.on('message', msg => {
           }
         });
 
-    client.on('message', msg => {
-        if (msg.content === 'ك') {
-           msg.reply('ك اللي هي اختصار **اوك**');
-          }
-        });
-
 //الترحيب
 
 client.on('guildMemberAdd', member => {

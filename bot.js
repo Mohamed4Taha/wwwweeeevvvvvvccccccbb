@@ -267,31 +267,6 @@ client.on('message', message => {
 
 
 
-//الغاء الباند 
-
-client.on('message' , najzx => {
-    var prefix = "$";
-    let user = najzx.mentions.users.first()|| client.users.get(najzx.content.split(' ')[1])
-    if(najzx.content.startsWith(prefix + 'unban')) {
-        if(!najzx.member.hasPermission('ADMINISTRATOR')) return najzx.channel.send('❌|**\`ADMINISTRATOR\`لا توجد لديك رتبة`**');
-        if(!user) return  najzx.channel.send(`Do this ${prefix} <@ID user> \n or \n ${prefix}unban ID user`);
-        najzx.guild.unban(user);
-        najzx.guild.owner.send(`لقد تم فك الباند عن الشخص \n ${user} \n By : <@${najzx.author.id}>`)
-        var embed = new Discord.RichEmbed()
-        .setThumbnail(najzx.author.avatarURl)
-        .setColor("RANDOM")
-        .setTitle('**Unban** !')
-        .addField('**User Unban :** ', `${user}` , true)
-        .addField('**By :**' ,       ` <@${najzx.author.id}> ` , true)
-        .setAuthor(najzx.guild.name)
-       .setFooter('Requested by '+najzx.author.username, najzx.author.avatarURL)
-        najzx.channel.sendEmbed(embed)
-    }
-  });
-
-
-
-
 //الطرد
 
 client.on('message', message => {
@@ -322,8 +297,8 @@ client.on('message', message => {
   .setAuthor(`KICKED!`, user.displayAvatarURL)
   .setColor("RANDOM")
   .setTimestamp()
-  .addField("**User:**",  '**[ ' + `${user.tag}` + ' ]**')
-  .addField("**By:**", '**[ ' + `${message.author.tag}` + ' ]**')
+  .addField("**تم اعطاء باند ل:**",  '**[ ' + `${user.tag}` + ' ]**')
+  .addField("**بواسطة:**", '**[ ' + `${message.author.tag}` + ' ]**')
   .addField("**Reason:**", '**[ ' + `${reason}` + ' ]**')
   message.channel.send({
     embed : kickembed
@@ -667,7 +642,7 @@ message.channel.send(embed)
                     return message.channel.send('**Please make sure that `Support Team` role exists and it\'s not duplicated.**');
                 };
             if(!ticketsStation) {
-                message.guild.createChannel("تذاكر", "category");
+                message.guild.createChannel("TICKETS", "category");
             };
                 message.guild.createChannel(`ticket-${message.author.username}`, "text").then(ticket => {
                     message.delete()
@@ -690,9 +665,9 @@ message.channel.send(embed)
                                 .setTitle('**New Ticket.**')
                                 .setColor("RANDOM")
                                 .setThumbnail(`${message.author.avatarURL}`)
-                                .addField('**السبب**', args)
-                                .addField('**صاحب التذكرة**', message.author)
-                                .addField('**في روم**', `<#${message.channel.id}>`);
+                                .addField('**SUBJECT**', args)
+                                .addField('**CREATED BY**', message.author)
+                                .addField('**FROM**', `<#${message.channel.id}>`);
  
                                 ticket.sendEmbed(embed);
                 }) .catch();

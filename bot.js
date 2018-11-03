@@ -630,7 +630,7 @@ if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return mess
 
 
 
-//كل السيرفرات
+//كل البوتات
 
 client.on('message', message => {
      if(!message.channel.guild) return;
@@ -640,7 +640,7 @@ client.on('message', message => {
     const botssize = message.guild.members.filter(m=>m.user.bot).map(m=>`${i++} - <@${m.id}>`);
     const embed = new Discord.RichEmbed()
   .setAuthor(message.author.tag, message.author.avatarURL)
-  .setDescription(`**Found ${message.guild.members.filter(m=>m.user.bot).size} bots in this Server**
+  .setDescription(`**تم ايجاد ${message.guild.members.filter(m=>m.user.bot).size} بوتات في هذا السيرفر**
 ${botssize.join('\n')}`)
 .setFooter(client.user.username, client.user.avatarURL)
 .setTimestamp();

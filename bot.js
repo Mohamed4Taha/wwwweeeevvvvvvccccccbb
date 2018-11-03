@@ -212,7 +212,7 @@ client.on("message", message => {
   
       .setTitle(`هذا هو شعار سيرفر ** ${message.guild.name} **`)
   .setAuthor(message.author.username, message.guild.iconrURL)
-    .setColor(PURPLE)
+    .setColor("PURPLE")
     .setImage(message.guild.iconURL)
     .setURL(message.guild.iconrURL)
                     .setTimestamp()

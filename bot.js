@@ -349,7 +349,7 @@ client.on('message', message => {
         message.delete()
       message.channel.sendMessage("", {embed: {
         title: "لا تسب",
-        color: 0x06DF00,
+        color: 6700bd,
         description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
         footer: {
           text: "🌟Five Stars🌟    [ !^мohαmε𝕯^!#4476      -     W͈̪̣AR NI̴̧͝GH̴̵T͇#4506 ]"

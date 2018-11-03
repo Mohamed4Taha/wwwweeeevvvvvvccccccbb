@@ -158,29 +158,22 @@ client.on("guildMemberAdd", member => {
 
 
 
+
 //حذف الشات
 
-client.on("message", message => { //clear
-              var args = message.content.substring(prefix.length).split(" ");
-              if (message.content.startsWith("$clear")) {
-                  if(!message.channel.guild) return message.reply('**❌ اسف لكن هذا الامر للسيرفرات فقط **');         
-     if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**⚠  لا يوجد لديك صلاحية لمسح الشات**');
-          var msg;
-          msg = parseInt();
-        
-        message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
-        message.channel.sendMessage("", {embed: {
-          title: "``تــم مسح الشات ``",
-          color: 0x5016f3, 
-          footer: {
-            
-          }
-        }}).then(msg => {msg.delete(3000)});
-                            }
-  
-       
+client.on('message', message => {       
+if (message.content.startsWith('مسح')) { //xRGRx .. By FIVE STARS
+    if(!message.channel.guild) return message.reply('⛔ | This Command For Servers Only!'); 
+        if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send('⛔ | You dont have **MANAGE_MESSAGES** Permission!');
+        if(!message.guild.member(client.user).hasPermission('MANAGE_MESSAGES')) return message.channel.send('⛔ | I dont have **MANAGE_MESSAGES** Permission!');
+ let args = message.content.split(" ").slice(1)
+    let messagecount = parseInt(args);
+    if (args > 1000) return message.reply("**🛑 || يجب ان يكون عدد المسح أقل من 100 .**").then(messages => messages.delete(5000))
+    if(!messagecount) args = '1000';
+    message.channel.fetchMessages({limit: messagecount + 1}).then(messages => message.channel.bulkDelete(messages));
+    message.channel.send(`\`${args}\` : __عدد الرسائل التي تم مسحها __ `).then(messages => messages.delete(5000));
+  }
   });
-
 
 
 

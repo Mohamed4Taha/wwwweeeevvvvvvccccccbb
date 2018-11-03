@@ -94,7 +94,7 @@ client.on('guildMemberAdd', member => {
     let memberavatar = member.user.avatarURL
       if (!channel) return;
     let embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
+        .setColor('PURPLE')
         .setThumbnail(memberavatar)
         .addField('🎽 | name :  ',`${member}`)
         .addField('📢 | اطلق من دخل' , `Welcome to the server, ${member}`)
@@ -118,7 +118,7 @@ client.on('guildMemberAdd', member => {
         .setTitle(`بس بعرف وين رحت؟؟؟ :raised_hand::skin-tone-1: :pensive:`)
         .setDescription(`مع السلامه تشرفنا بك :raised_hand::skin-tone-1: :pensive: `)
         .addField('👤   تبقي',`**[ ${member.guild.memberCount} ]**`,true)
-        .setColor('RED')
+        .setColor('PURPLE')
         .setFooter(`====اهلا السيرفر نور بيك و الله====`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
     
     var channel =member.guild.channels.find('name', 'welcome')
@@ -171,7 +171,7 @@ client.on("guildMemberAdd", m => {
 .setThumbnail(message.author.avatarURL)
 .addField(' البنق🚀 ',`[${Date.now() - message.createdTimestamp}]`) 
 .addField('مصمم  + صاحب البوت ',`★мohme𝕯★| ProG🌹#4476 و W͈̪̣AR NI̴̧͝GH̴̵T͇ | RG🌹#4506`)
-.setColor('#027aff')
+.setColor('PURPLE')
   message.channel.sendEmbed(embed);
     }
 });
@@ -212,7 +212,7 @@ client.on("message", message => {
   
       .setTitle(`هذا هو شعار سيرفر ** ${message.guild.name} **`)
   .setAuthor(message.author.username, message.guild.iconrURL)
-    .setColor(0x164fe3)
+    .setColor(PURPLE)
     .setImage(message.guild.iconURL)
     .setURL(message.guild.iconrURL)
                     .setTimestamp()
@@ -253,7 +253,7 @@ client.on('message', message => {
 
   const banembed = new Discord.RichEmbed()
   .setAuthor(`BANNED!`, user.displayAvatarURL)
-  .setColor("RANDOM")
+  .setColor("PURPLE")
   .setTimestamp()
   .addField("**User:**",  '**[ ' + `${user.tag}` + ' ]**')
   .addField("**By:**", '**[ ' + `${message.author.tag}` + ' ]**')
@@ -295,7 +295,7 @@ client.on('message', message => {
 
   const kickembed = new Discord.RichEmbed()
   .setAuthor(`KICKED!`, user.displayAvatarURL)
-  .setColor("RANDOM")
+  .setColor("PURPLE")
   .setTimestamp()
   .addField("**تم اعطاء باند ل:**",  '**[ ' + `${user.tag}` + ' ]**')
   .addField("**بواسطة:**", '**[ ' + `${message.author.tag}` + ' ]**')
@@ -663,7 +663,7 @@ message.channel.send(embed)
                                 });
                     let embed = new Discord.RichEmbed()
                                 .setTitle('**New Ticket.**')
-                                .setColor("RANDOM")
+                                .setColor("PURPLE")
                                 .setThumbnail(`${message.author.avatarURL}`)
                                 .addField('**SUBJECT**', args)
                                 .addField('**CREATED BY**', message.author)
@@ -679,7 +679,7 @@ message.channel.send(embed)
         };  
                 let embed = new Discord.RichEmbed()
                     .setAuthor("**هل انت متاكد من اغلاق هذه التذكر ؟! .. اذا كنت متاكد اكتب الامر مرة اخرى**")
-                    .setColor("RANDOM");
+                    .setColor("PURPLE");
                     message.channel.sendEmbed(embed) .then(codes => {
  
                    

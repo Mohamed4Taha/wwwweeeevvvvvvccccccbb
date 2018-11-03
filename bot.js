@@ -189,7 +189,7 @@ if (message.content.startsWith('$clear')) { //xRGRx .. By FIVE STARS
         if(!message.guild.member(client.user).hasPermission('MANAGE_MESSAGES')) return message.channel.send('⛔ | I dont have **MANAGE_MESSAGES** Permission!');
  let args = message.content.split(" ").slice(1)
     let messagecount = parseInt(args);
-    if (args > 1000) return message.reply("**🛑 || يجب ان يكون عدد المسح أقل من 100 .**").then(messages => messages.delete(5000))
+    if (args > 1000) return message.reply("**🛑 || يجب ان يكون عدد المسح أقل من 1000 .**").then(messages => messages.delete(5000))
     if(!messagecount) args = '1000';
     message.channel.fetchMessages({limit: messagecount + 1}).then(messages => message.channel.bulkDelete(messages));
     message.channel.send(`\`${args}\` : __عدد الرسائل التي تم مسحها __ `).then(messages => messages.delete(5000));
@@ -210,7 +210,7 @@ client.on("message", message => {
       if(message.content === "$image"){ 
           const embed = new Discord.RichEmbed()
   
-      .setTitle(`This is  ** ${message.guild.name} **  Photo !`)
+      .setTitle(`هذا هو شعار سيرفر ** ${message.guild.name} **`)
   .setAuthor(message.author.username, message.guild.iconrURL)
     .setColor(0x164fe3)
     .setImage(message.guild.iconURL)

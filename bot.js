@@ -867,7 +867,7 @@ client.on('message',async message => {
           
 
            if (message.content.startsWith("$id")) {
-           if (message.channel.id !== "471628099709304862") return;
+           if (message.channel.id !== "504776937890119701") return;
             
             if(!message.channel.guild) return message.reply(`هذا الأمر فقط ل السيرفرات ❌`);
 

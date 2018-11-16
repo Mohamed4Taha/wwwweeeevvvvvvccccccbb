@@ -925,22 +925,22 @@ client.on('message', message => {
                  message.channel.send({embed: new Discord.RichEmbed().setTitle('Loading ' + virusname + "...").setColor(0xFF0000)}).then(function(m) {
              setTimeout(function() {
                m.edit({embed: new Discord.RichEmbed().setTitle('[' + virusname + ']: Loading Discord Virus [¦ ] 1%').setColor(0xFF0000)})
-             }, 1000)
+             }, 3000)
             setTimeout(function() {
                m.edit({embed: new Discord.RichEmbed().setTitle('[' + virusname + ']: Loading Discord Virus [¦¦¦¦] 25%').setColor(0xFF0000)})
-             }, 2000)
+             }, 4000)
            setTimeout(function() {     
                m.edit({embed: new Discord.RichEmbed().setTitle('[' + virusname + ']: Loading Discord Virus [¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦ ] 100%').setColor(0xFF0000)})
-             }, 3000)
+             }, 5000)
                 setTimeout(function() {
                m.edit({embed: new Discord.RichEmbed().setTitle('[' + virusname + ']: Uploaded! Initiating explosion in 1...').setColor(0xFF0000)})
-             }, 4000)
+             }, 6000)
               setTimeout(function() {
                m.delete()
-           }, 5000)
+           }, 7000)
              setTimeout(function() {
                message.channel.send('تم تهكير الشخص بنجاح')
-           }, 6000)
+           }, 8000)
            });
          }
  });

@@ -908,3 +908,44 @@ var mentionned = message.mentions.members.first();
 
          
      });
+
+
+
+
+
+
+
+//كود معلومات سيرفر من صنعي
+
+client.on('message', message => { //by Honrar
+ if (message.content.startsWith("$server")) { //by Honrar
+ let embed = new Discord.RichEmbed() //by Honrar
+.setAuthor(message.author.username, message.guild.iconrURL) //by Honrar
+ .addField('**====>   معلومات السيرفر   <====**') //by Honrar
+.addField('اسم السيرفر | 🏁',`**[ ${message.guild.name} ]**`) //by Honrar
+.addField('عدد اعضاء السيرفر | 👤',`**[ ${client.users.size} ]**`) //by Honrar
+.addField('عدد بوتات السيرفر | 🤖',`**[ ${message.guild.members.filter(m=>m.user.bot).size} ]**`) //by Honrar
+.addField('عدد رومات السيرفر | 📚',`**[ ${message.guild.channels.size} ]**`) //by Honrar
+.addField("**عدد رتب السيرفر | 🔐**",`**[ ${message.guild.roles.size} ]**`) //by Honrar
+.setColor('RANDOM') //by Honrar
+  message.channel.sendEmbed(embed); //by Honrar
+    } //by Honrar
+}); //by Honrar
+
+
+
+
+
+
+
+//كود عدد اعضاء السيرفر من صنعي
+
+client.on('message', message => {
+ if (message.content.startsWith("$count")) {
+ let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.addField('__ عدد اعضاء السيرفر 👤   |   👤 Server count__ ',`**[ ${client.users.size} ]**`)
+.setColor('RANDOM')
+  message.channel.sendEmbed(embed);
+    }
+});

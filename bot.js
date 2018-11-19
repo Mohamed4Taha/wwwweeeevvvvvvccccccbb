@@ -92,22 +92,20 @@ client.on('message', msg => {
 client.on('guildMemberAdd', member => {
     let channel = member.guild.channels.find('name', '♛『five』♛');
     let memberavatar = member.user.avatarURL
-      if (!channel) return;
+      if (!channel) return; 
     let embed = new Discord.RichEmbed()
         .setColor('PURPLE')
         .setThumbnail(memberavatar)
-        .addField('🎽 | name :  ',`${member}`)
-        .addField('📢 | اطلق من دخل' , `Welcome to the server, ${member}`)
-        .addField('🆔 | user :', "**[" + `${member.id}` + "]**" )
+        .addField(':running_shirt_with_sash: | اسم الاسطوري :  ',`${member}`)
+        .addField(':loudspeaker: | نورت السيرفر ي قلبي' , `Welcome to the server`)
+        .addField(':id: | ايدي الاسطوري :', "**[" + `${member.id}` + "]**" )
                 .addField('➡| انت العضو رقم',`${member.guild.memberCount}`)
-               
-                  .addField("Name:",`<@` + `${member.id}` + `>`, true)
-                     
+                                     
                                      .addField(' الـسيرفر', `${member.guild.name}`,true)
                                        
-     .setFooter(`${member.guild.name}`)
+     .setFooter("**HøNrār🍺🍺**")
         .setTimestamp()
-   
+    
       channel.sendEmbed(embed);
     });
 	
@@ -121,7 +119,7 @@ client.on('guildMemberAdd', member => {
         .setColor('PURPLE')
         .setFooter(`====اهلا السيرفر نور بيك و الله====`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
     
-    var channel =member.guild.channels.find('name', 'welcome')
+    var channel =member.guild.channels.find('name', '♛『five』♛')
     if (!channel) return;
     channel.send({embed : embed});
 
@@ -170,7 +168,7 @@ client.on("guildMemberAdd", m => {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .addField(' البنق🚀 ',`[${Date.now() - message.createdTimestamp}]`) 
-.addField('مصمم  + صاحب البوت ',`★мohme𝕯★| ProG🌹#4476 و W͈̪̣AR NI̴̧͝GH̴̵T͇ | RG🌹#4506`)
+.addField('مصمم  + صاحب البوت ',`HøNrār🍺🍺 و W͈̪̣AR NI̴̧͝GH̴̵T͇`)
 .setColor('PURPLE')
   message.channel.sendEmbed(embed);
     }
@@ -255,9 +253,9 @@ client.on('message', message => {
   .setAuthor(`BANNED!`, user.displayAvatarURL)
   .setColor("PURPLE")
   .setTimestamp()
-  .addField("**User:**",  '**[ ' + `${user.tag}` + ' ]**')
-  .addField("**By:**", '**[ ' + `${message.author.tag}` + ' ]**')
-  .addField("**Reason:**", '**[ ' + `${reason}` + ' ]**')
+  .addField("**المتبند:**",  '**[ ' + `${user.tag}` + ' ]**')
+  .addField("**بواسطة:**", '**[ ' + `${message.author.tag}` + ' ]**')
+  .addField("**السبب:**", '**[ ' + `${reason}` + ' ]**')
   message.channel.send({
     embed : banembed
   })
@@ -297,9 +295,9 @@ client.on('message', message => {
   .setAuthor(`KICKED!`, user.displayAvatarURL)
   .setColor("PURPLE")
   .setTimestamp()
-  .addField("**تم اعطاء باند ل:**",  '**[ ' + `${user.tag}` + ' ]**')
+  .addField("**المطرود:**",  '**[ ' + `${user.tag}` + ' ]**')
   .addField("**بواسطة:**", '**[ ' + `${message.author.tag}` + ' ]**')
-  .addField("**Reason:**", '**[ ' + `${reason}` + ' ]**')
+  .addField("**السبب:**", '**[ ' + `${reason}` + ' ]**')
   message.channel.send({
     embed : kickembed
   })
@@ -473,45 +471,6 @@ client.on('message', message => {
 }); 
 
 
-
-
-//كود اللفل
-
-const fs = require("fs");
-client.on('message', async message =>{
-    let messageArray = message.content.split(" ");
-    let cmd = messageArray[0];
-    let args = messageArray.slice(1);
-    let xp = require("./xp.json");
-
-  let xpAdd = Math.floor(Math.random() * 7) + 8;
-  console.log(xpAdd);
-
-  if(!xp[message.author.id]){
-    xp[message.author.id] = {
-      xp: 0,
-      level: 1
-    };
-  }
-
-
-  let curxp = xp[message.author.id].xp;
-  let curlvl = xp[message.author.id].level;
-  let nxtLvl = xp[message.author.id].level * 300;
-  xp[message.author.id].xp =  curxp + xpAdd;
-  if(nxtLvl <= xp[message.author.id].xp){
-    xp[message.author.id].level = curlvl + 1;
-    let lvlup = new Discord.RichEmbed()
-    .setTitle("Level Up!")
-    .setColor(purple)
-    .addField("New Level", curlvl + 1);
-
-    message.channel.send(lvlup).then(msg => {msg.delete(5000)});
-  }
-  fs.writeFile("./xp.json", JSON.stringify(xp), (err) => {
-    if(err) console.log(err)
-  });
-});
 
 
 
@@ -895,7 +854,7 @@ var mentionned = message.mentions.members.first();
         moment.locale('ar-TN');
       var id = new  Discord.RichEmbed()
        
-    .setColor("#0a0909")
+    .setColor("#9905d6")
  .setThumbnail(message.author.avatarURL)
 .addField(': تاريخ دخولك للديسكورد',` \`${moment(heg.createdTimestamp).format('YYYY/M/D HH:mm:ss')} \`**\n ${moment(heg.createdTimestamp).fromNow()}**` ,true) 
 .addField(': تاريخ دخولك لسيرفرنا', `\`${moment(h.joinedAt).format('YYYY/M/D HH:mm:ss')}  \` **\n ${moment(h.joinedAt).fromNow()} **`, true)

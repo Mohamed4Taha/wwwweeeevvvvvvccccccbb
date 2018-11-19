@@ -903,3 +903,18 @@ client.on('message', message => {
            });
          }
  });
+
+
+
+
+//عرض الرتب
+
+client.on('message', message => {
+    if (message.content === "$roles") {
+        var roles = message.guild.roles.map(roles => `${roles.name}, `).join(' ')
+        const embed = new Discord.RichEmbed()
+        .setColor('PURPLE')
+        .addField('الرتب:',`**[${roles}]**`)
+        message.channel.sendEmbed(embed);
+    }
+});

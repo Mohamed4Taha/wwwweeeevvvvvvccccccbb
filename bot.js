@@ -1012,9 +1012,15 @@ message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم 
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
    .setThumbnail(message.author.avatarURL) 
- .addField('لعبه كت تويت' ,
+ .addField('CUT TWEET' ,
   `${cuttweet[Math.floor(Math.random() * cuttweet.length)]}`)
   message.channel.sendEmbed(embed);
   console.log('[id] Send By: ' + message.author.username)
     }
 });
+
+client.on('message', msg => {
+    if (msg.content === '$cuttweet') {
+       msg.channel.send('** @everyone **');
+      }
+    });

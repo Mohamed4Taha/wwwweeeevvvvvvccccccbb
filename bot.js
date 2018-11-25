@@ -1007,7 +1007,7 @@ message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم 
 ]
 
  client.on('message', message => {
-   if (message.content.startsWith("حط الامر هنا")) {
+   if (message.content.startsWith("$cuttweet")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')

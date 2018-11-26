@@ -90,7 +90,7 @@ client.on('message', msg => {
 //الترحيب
 
 client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', '♛『five』♛');
+    let channel = member.guild.channels.find('name', '♛『welcome』♛');
     let memberavatar = member.user.avatarURL
       if (!channel) return; 
     let embed = new Discord.RichEmbed()

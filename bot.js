@@ -89,25 +89,25 @@ client.on('message', msg => {
 
 //الترحيب
 
-client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', '♛『welcome』♛');
-    let memberavatar = member.user.avatarURL
-      if (!channel) return; 
-    let embed = new Discord.RichEmbed()
-        .setColor('PURPLE')
-        .setThumbnail(memberavatar)
-        .addField(':running_shirt_with_sash: | اسم الاسطوري :  ',`${member}`)
-        .addField(':loudspeaker: | نورت السيرفر ي قلبي' , `Welcome to the server`)
-        .addField(':id: | ايدي الاسطوري :', "**[" + `${member.id}` + "]**" )
-                .addField('➡| انت العضو رقم',`${member.guild.memberCount}`)
+//client.on('guildMemberAdd', member => {
+   // let channel = member.guild.channels.find('name', '♛『welcome』♛');
+    //let memberavatar = member.user.avatarURL
+  //    if (!channel) return; 
+//    let embed = new Discord.RichEmbed()
+        //.setColor('PURPLE')
+       // .setThumbnail(memberavatar)
+        //.addField(':running_shirt_with_sash: | اسم الاسطوري :  ',`${member}`)
+        //.addField(':loudspeaker: | نورت السيرفر ي قلبي' , `Welcome to the server`)
+        //.addField(':id: | ايدي الاسطوري :', "**[" + `${member.id}` + "]**" )
+           //     .addField('➡| انت العضو رقم',`${member.guild.memberCount}`)
                                      
-                                     .addField(' الـسيرفر', `${member.guild.name}`,true)
+         //                            .addField(' الـسيرفر', `${member.guild.name}`,true)
                                        
-     .setFooter("**HøNrār🍺🍺**")
-        .setTimestamp()
+     //.setFooter("**HøNrār🍺🍺**")
+       // .setTimestamp()
     
-      channel.sendEmbed(embed);
-    });
+   //   channel.sendEmbed(embed);
+ //   });
 	
     
 	
